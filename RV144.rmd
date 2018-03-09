@@ -1,7 +1,7 @@
 ---
 title: "RV144 Aids trials"
-author: "instr"
-date: "April 13, 2016"
+author: "Laura Van Kleef"
+date: "March 6th, 2018"
 output: html_document
 ---
 
@@ -51,6 +51,8 @@ rownames(results) <- c("none","aids")
 ```{r}
 barchartGC(results,type = "percent")
 ```
+  
+We would expect to see both graphs of eq size (50% on each side) if the two are independent. They do not appear to be equal  .. shedding doubt on the idea of Independence.  
 
 ### Numerical Results
 
@@ -66,7 +68,15 @@ rowPerc(results)
 
 ## Inferential results
 
-<!--Display inferential evidence as to the effectiveness of the vaccine with explanations and interpretations!-->
+<!--Display inferential evidence as to the effectiveness of the vaccine with explanations and interpretations!-->  
+We now want to run a statistical test to see if the aides vaccine was seemingly effective. We state the null and alternative hypothesis for this test.
+
+Our Null Hypothesis shall be:  
+
+$H_0:$  There is no relationship between getting Aids and haven taken the  Aids vaccine.  
+
+The Alternative Hypothesis is:  
+$H_a:$ There is a relationship between getting Aids and having the vaccine. 
 
 ```{r}
 chisqtestGC(results, graph = TRUE)
@@ -74,5 +84,7 @@ chisqtestGC(results, graph = TRUE)
 
 
 ## Conclusions
+There is no correlation in getting Aids and having a vaccine, because people that got a placebo were still placed higher in the bar graph, greater than those with a vaccine.
+
 
 <Summarise your results as to the effectiveness of the vaccine with explanations that could be understood by your mom>

@@ -71,7 +71,10 @@ rowPerc(results)
 ```{r}
 chisqtestGC(results, graph = TRUE)
 ```
-
+  
+We now test the independence of the aids vaccine and placebo groups.  
+$H_0:$ The placebo and aids vaccines treatment is independent of contracting the disease Aids.    
+$H_a:$ Having the vaccine is related to contracting the disease.  
 
 ## Conclusions
 
